@@ -2,11 +2,9 @@ package plus.studio.beta.streamvideo.activities;
 
 import android.graphics.Bitmap;
 import android.media.MediaPlayer;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.MediaController;
@@ -20,8 +18,8 @@ import java.io.IOException;
 
 import plus.studio.beta.streamvideo.R;
 
-public class CustomActivity extends ActionBarActivity {
-    private static final String TAG = CustomActivity.class.getName();
+public class ThirdActivity extends ActionBarActivity {
+    private static final String TAG = ThirdActivity.class.getName();
 
     private TextureVideoView mVideoView;
 
@@ -85,7 +83,8 @@ public class CustomActivity extends ActionBarActivity {
     private void saveCurrentFrame() {
         final Bitmap currentFrameBitmap = mVideoView.getBitmap();
 
-        final File currentFrameFile = new File(getExternalFilesDir("frames"), "frame" + System.currentTimeMillis() + ".jpg");
+        final File currentFrameFile = new File(getExternalFilesDir("frames"),
+                "frame" + System.currentTimeMillis() + ".jpg");
         writeBitmapToFile(currentFrameBitmap, currentFrameFile);
 
         currentFrameBitmap.recycle();
