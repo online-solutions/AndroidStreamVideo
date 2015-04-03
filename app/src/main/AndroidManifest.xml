@@ -14,13 +14,21 @@
             android:label="@string/title_activity_main" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.CustomActivity"
+            android:name=".activities.ThirdActivity"
             android:label="@string/title_activity_custom" >
+        </activity>
+        <activity
+            android:name=".activities.SecondActivity"
+            android:label="@string/title_activity_second" >
+        </activity>
+        <activity
+            android:name=".activities.FourthActivity"
+            android:screenOrientation="landscape"
+            android:label="@string/title_activity_fourth" >
         </activity>
     </application>
 

@@ -2,23 +2,19 @@ package plus.studio.beta.streamvideo.activities;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.MediaController;
-import android.widget.VideoView;
 
 import plus.studio.beta.streamvideo.R;
-import plus.studio.beta.streamvideo.extra.Utils;
 
 public class MainActivity extends Activity {
 
-    private VideoView videoView;
-    private Button btnCustomActive;
+    private Button btnSecondActivity;
+    private Button btnThirdActivity;
+    private Button btnFourthActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,28 +22,29 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         //init
-        videoView = (VideoView) findViewById(R.id.myVideoView);
-        btnCustomActive = (Button) findViewById(R.id.btnCustomActive);
+        btnSecondActivity = (Button) findViewById(R.id.btnSecondActivity);
+        btnThirdActivity = (Button) findViewById(R.id.btnThirdActivity);
+        btnFourthActivity = (Button) findViewById(R.id.btnFourthActivity);
 
         // start custom activities
-        btnCustomActive.setOnClickListener(new View.OnClickListener() {
+        btnSecondActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), CustomActivity.class));
+                startActivity(new Intent(getApplicationContext(), SecondActivity.class));
             }
         });
-
-        Uri videoUri = Uri.parse(Utils.videoUrl);
-
-        videoView.setVideoURI(videoUri);
-
-        // media control, call before start
-        MediaController mediaController = new MediaController(this);
-        mediaController.setAnchorView(videoView);
-        videoView.setMediaController(mediaController);
-
-        videoView.start();
-
+        btnThirdActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), ThirdActivity.class));
+            }
+        });
+        btnFourthActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), FourthActivity.class));
+            }
+        });
     }
 
 

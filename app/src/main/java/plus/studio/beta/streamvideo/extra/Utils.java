@@ -1,5 +1,9 @@
 package plus.studio.beta.streamvideo.extra;
 
+import android.content.Context;
+
+import plus.studio.beta.streamvideo.R;
+
 /**
  * Created by khanhphung on 30/3/15.
  */
@@ -10,5 +14,8 @@ public class Utils {
     // 3GP, MP4, WEBM, and MKV...
     // stream via: RTSP, HTTP, and HTTPS (from Android 3.1).
 
+    public static String getVideoPath(Context context) {
+        return "android.resource://" + context.getPackageName() + "/" + R.raw.video;
+    }
 
 }

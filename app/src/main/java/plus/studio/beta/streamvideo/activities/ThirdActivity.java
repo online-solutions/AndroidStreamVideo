@@ -4,10 +4,13 @@ import android.graphics.Bitmap;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.MediaController;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.sprylab.android.widget.TextureVideoView;
@@ -70,6 +73,13 @@ public class ThirdActivity extends ActionBarActivity {
         // "forces" anti-aliasing - but increases time for taking frames - so keep it disabled
         // mVideoView.setScaleX(1.00001f);
         mVideoView.start();
+        // test fullscreen
+//        DisplayMetrics metrics = new DisplayMetrics(); getWindowManager().getDefaultDisplay().getMetrics(metrics);
+//        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) mVideoView.getLayoutParams();
+//        params.width =  metrics.widthPixels;
+//        params.height = metrics.heightPixels;
+//        params.leftMargin = 0;
+//        mVideoView.setLayoutParams(params);
     }
 
     private void startVideoAnimation() {

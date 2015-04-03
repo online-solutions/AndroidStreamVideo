@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="plus.studio.beta.streamvideo.activities.CustomActivity">
+    tools:context="plus.studio.beta.streamvideo.activities.ThirdActivity">
 
     <com.sprylab.android.widget.TextureVideoView
         android:id="@+id/video_view"
