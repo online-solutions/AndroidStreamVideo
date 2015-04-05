@@ -38,14 +38,6 @@ public class SecondActivity extends ActionBarActivity {
 
         videoView.start();
 
-//        // test fullscreen
-//        DisplayMetrics metrics = new DisplayMetrics(); getWindowManager().getDefaultDisplay().getMetrics(metrics);
-//        RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) videoView.getLayoutParams();
-//        params.width =  metrics.widthPixels;
-//        params.height = metrics.heightPixels;
-//        params.leftMargin = 0;
-//        videoView.setLayoutParams(params);
-
     }
 
 

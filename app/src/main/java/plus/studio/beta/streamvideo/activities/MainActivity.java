@@ -10,6 +10,10 @@ import android.widget.Button;
 
 import plus.studio.beta.streamvideo.R;
 
+// I make 3 demo for run video
+// 1. SecondActivity: using VideoView to display video, and MediaController to controller video
+// 2. ThirdActivity: using TextureVideoView from srylab (tut from android-arsenal)
+// 3. FourActivity: using SurfaceView to display video and a FrameLayout to display Video Control
 public class MainActivity extends Activity {
 
     private Button btnSecondActivity;
